@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CrOSh-ux</title>
-</head>
-<body>
-<h1>I'm gonna dox you and theres nothing you can do about it.</h1>
-<h1 id="ip"></h1>
-<script>
-function i(n){var t,e;t=function(t){n(t)},(e=new XMLHttpRequest).open("GET","https://ip-checker.claytontdm.repl.co/",!0),e.onreadystatechange=function(){4===e.readyState&&200===e.status&&t(e.responseText)},e.send()}i(function(n){document.getElementById('ip').innerHTML=n;});
-</script>
-</body>
+  <head>
+    <title>CrOSh-ux</title>
+    <style>
+      body {
+        background-color: #121212;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin: 2rem 0 1rem 0;
+      }
+      #ip {
+        font-size: 3.5rem;
+        margin: 0;
+        font-weight: bold;
+      }
+      @keyframes bgAnimation {
+        from { background-color: #121212; }
+        to { background-color: #232323; }
+      }
+      body {
+        animation-name: bgAnimation;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Get fucking doxxed!</h1>
+    <h1 id="ip">Loading...</h1>
+    <p>Made by 3kh0 for CrOSh-ux</p>
+    <script>
+      function i(n) {
+        var t, e;
+        (t = function (t) {
+          n(t);
+        }),
+          (e = new XMLHttpRequest()).open("GET", "https://ip-checker.claytontdm.repl.co/", !0),
+          (e.onreadystatechange = function () {
+            4 === e.readyState && 200 === e.status && t(e.responseText);
+          }),
+          e.send();
+      }
+      i(function (n) {
+        document.getElementById("ip").innerHTML = n;
+      });
+    </script>
+  </body>
 </html>
